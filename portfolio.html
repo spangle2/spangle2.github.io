@@ -14,6 +14,10 @@
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             background: #111;
             color: #f5f5f5;
@@ -32,26 +36,7 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: -1; /* Changed from 1000 to -1 */
-        }
-
-        .weather-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1001;
-            background: rgba(17, 17, 17, 0.8);
-            border: 1px solid #333;
-            color: #f5f5f5;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: 'Crimson Text', serif;
-            transition: all 0.3s ease;
-        }
-
-        .weather-toggle:hover {
-            background: rgba(34, 34, 34, 0.9);
+            z-index: -1;
         }
 
         .rain, .snow {
@@ -208,6 +193,17 @@
             font-weight: 500;
         }
         
+        .project h3 a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .project h3 a:hover {
+            color: #ddd;
+            text-decoration: underline;
+        }
+        
         .project-meta {
             color: #999;
             font-size: 0.9rem;
@@ -315,6 +311,7 @@
         <div class="rain" id="rain"></div>
         <div class="snow" id="snow"></div>
     </div>
+    
     <div class="container">
         <header>
             <h1>Hi, I'm Jordan.</h1>
@@ -341,73 +338,132 @@ I'm always excited to take on new challenges and collaborate on projects that pu
             <h2>Selected Work</h2>
             
             <div class="project">
-                <h3>Resource Management Game</h3>
+                <h3><a href="https://spangle2.itch.io/euclidia" data-project="resource-management">Resource Management Game</a></h3>
                 <div class="project-meta">C++, Raylib • 2025</div>
                 <p>Master the delicate balance of resources, technology, and time as you race against stellar collapse. Every decision matters when a star's fate—and countless lives—hangs in the balance.</p>
             </div>
             
             <div class="project">
-                <h3>Galaxy 2D</h3>
+                <h3><a href="https://galaxy3-d.vercel.app/" data-project="galaxy-2d">Galaxy 3D</a></h3>
                 <div class="project-meta">C++, Raylib • 2025</div>
                 <p>Traverse procedurally generated star systems in this expansive space exploration adventure. Discover unique worlds, alien civilizations, and cosmic mysteries across an infinite 2D universe.</p>
             </div>
             
             <div class="project">
-                <h3>Ants</h3>
+                <h3><a href="https://spangle2.itch.io/ants" data-project="ants">Ants</a></h3>
                 <div class="project-meta">C++, Raylib • 2025</div>
                 <p>Watch emergent colony behavior unfold as virtual ants use pheromone trails and simple AI to forage, communicate, and build complex societies. A fascinating glimpse into swarm intelligence and collective decision-making.</p>
             </div>
             
             <div class="project">
-                <h3>Galaxy 3D</h3>
-                <div class="project-meta">HTML, JS, CSS</div>
-                <p>Explore infinite three-dimensional space in this immersive universe simulation. Navigate through procedurally generated star systems, planets, and cosmic phenomena with full freedom of movement across the vast expanse of space.</p>
+                <h3><a href="#" data-project="galaxy-3d">Minecraft Chat Mod</a></h3>
+                <div class="project-meta">Java, Fabric • 2025</div>
+                <p>A comprehensive, and advanced chat mod with human like responses for the server 2b2t.org</p>
             </div>
         </section>
         
         <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>
+                            <i class="devicon-javascript-plain colored"></i> JavaScript
+                        </li>
+                        <li>
+                            <i class="devicon-html5-plain colored"></i> HTML / CSS
+                        </li>
+                        <li>
+                            <i class="devicon-cplusplus-plain colored"></i> C++
+                        </li>
+                        <li>
+                            <i class="devicon-csharp-plain colored"></i> C# / C
+                        </li>
+                        <li>
+                            <i class="devicon-java-plain colored"></i> Java
+                        </li>
+                    </ul>
+                </div>
 
-        <div class="skill-category">
-            <h3>Programming Languages</h3>
-            <ul>
-                <li>
-                    <i class="devicon-javascript-plain colored"></i> JavaScript
-                </li>
-                <li>
-                    <i class="devicon-html5-plain colored"></i> HTML / CSS
-                </li>
-                <li>
-                    <i class="devicon-cplusplus-plain colored"></i> C++
-                </li>
-                <li>
-                    <i class="devicon-csharp-plain colored"></i> C# / C
-                </li>
-                <li>
-                    <i class="devicon-java-plain colored"></i> Java
-                </li>
-            </ul>
-        </div>
-
-        <div class="skill-category">
-            <h3>Tools & Technologies</h3>
-            <ul>
-                <li>
-                    <i class="devicon-git-plain colored"></i> Git / GitHub
-                </li>
-                <li>
-                    <i class="devicon-raylib-plain colored"></i> Raylib
-                </li>
-                <li>
-                    <i class="devicon-unity-plain colored"></i> Game Development
-                </li>
-                <li>
-                    <i class="devicon-react-original colored"></i> Web Development
-                </li>
-            </ul>
-        </div>
-
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <ul>
+                        <li>
+                            <i class="devicon-git-plain colored"></i> Git / GitHub
+                        </li>
+                        <li>
+                            <i class="devicon-raylib-plain colored"></i> Raylib
+                        </li>
+                        <li>
+                            <i class="devicon-unity-plain colored"></i> Game Development
+                        </li>
+                        <li>
+                            <i class="devicon-react-original colored"></i> Web Development
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <a href="mailto:jordanabram1230623@gmail.com">Email</a>
+                <a href="https://github.com/spangle2">GitHub</a>
+                <a href="https://spangle2.itch.io/">Itch.io</a>
+            </div>
+        </section>
     </div>
 
+    <footer>
+        <p>&copy; 2025 Jordan. All rights reserved.</p>
+    </footer>
 
+    <script>
+        // Weather functionality (kept for the visual effects)
+        function createRain() {
+            const rain = document.getElementById('rain');
+            rain.innerHTML = '';
+            
+            for (let i = 0; i < 100; i++) {
+                const drop = document.createElement('div');
+                drop.className = 'raindrop';
+                drop.style.left = Math.random() * 100 + '%';
+                drop.style.animationDuration = (Math.random() * 0.5 + 0.5) + 's';
+                drop.style.animationDelay = Math.random() * 2 + 's';
+                rain.appendChild(drop);
+            }
+        }
+
+        function createSnow() {
+            const snow = document.getElementById('snow');
+            snow.innerHTML = '';
+            
+            for (let i = 0; i < 50; i++) {
+                const flake = document.createElement('div');
+                flake.className = 'snowflake';
+                flake.style.left = Math.random() * 100 + '%';
+                flake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                flake.style.animationDelay = Math.random() * 5 + 's';
+                snow.appendChild(flake);
+            }
+        }
+
+        // Initialize weather effects
+        createRain();
+        createSnow();
+
+        // Project link handler (placeholder for when you add actual links)
+        document.querySelectorAll('[data-project]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const projectName = this.getAttribute('data-project');
+                console.log('Clicked project:', projectName);
+                // You can replace the href="#" with actual URLs when you add them
+                // For now, this prevents the default anchor behavior
+            });
+        });
+    </script>
+</body>
+</html>
